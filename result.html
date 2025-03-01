@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asista Jewelry - 추천 결과</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Gloock&display=swap" rel="stylesheet">
+    <style>
+        /* 기존 스타일 그대로 유지 */
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            color: #ff417d; /* 상단 제목 색상 */
+        }
+        body {
+            font-family: 'Nanum Myeongjo', serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: linear-gradient(135deg, #f0e5e9, #e8f3f7);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            background-color: #f9e4ea; /* 연핑크 톤 */
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background: linear-gradient(90deg, #ff5c8e, #ff417d);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: none;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #ff417d, #ff5c8e);
+        }
+        .question-container {
+            width: 100%;
+            padding: 0 20px;
+        }
+        .question-text {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-family: 'Gloock', serif;
+            color: #333;
+        }
+        .result-container {
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .result-card {
+            background-color: #f9e4ea;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        .result-card:hover {
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+        }
+        .result-card span {
+            font-family: 'Gloock', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .selected {
+            border: 3px solid #ff417d;
+            background-color: #ffe5ec;
+            box-shadow: 0px 10px 20px rgba(255, 65, 125, 0.3);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex flex-col items-center justify-center w-full max-w-3xl">
+        <!-- 상단 로고 및 제목 -->
+        <div class="text-center mb-8 w-full">
+            <h1>Asista <span class="text-gray-800">Jewelry</span></h1>
+            <p class="mt-4">당신을 위한 맞춤형 주얼리 추천</p>
+        </div>
+
+        <!-- 결과 페이지 컨테이너 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 w-full flex flex-col justify-between">
+            <h2 class="text-3xl font-bold mb-6 text-center">고객님이 선택하신 주얼리</h2>
+            
+            <div id="result-container" class="result-container">
+                <!-- 고객 선택 결과는 여기서 동적으로 채워집니다 -->
+            </div>
+            
+            <div class="flex justify-center mt-6">
+                <button class="btn" onclick="window.location.href='index.html'">다시 시작하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html>
