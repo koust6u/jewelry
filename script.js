@@ -31,7 +31,7 @@ const questions = [
         options: [
             { text: "고급(세련미)", image: "./images/Luxury.jpg" },
             { text: "청순", image: "./images/Pure.jpg" },
-            { text: "귀여움(러블리)", image: "./images/Lovely.jpg" },
+            { text: "귀여움(러블리)", image: "./images/lovely.jpg" },
             { text: "캐주얼(꾸안꾸)", image: "./images/Casual.jpg" },
             { text: "미니멀", image: "./images/Minimalist.jpg" },
             { text: "클래식", image: "./images/Classic.jpg" }
