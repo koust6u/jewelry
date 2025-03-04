@@ -14,7 +14,7 @@ function displayResult() {
     jewelrySelection.classList.add("result-card", "mb-6");
     jewelrySelection.innerHTML = `
         <h3 class="text-2xl font-semibold">1. 반지</h3>
-        <p class="mt-2">고객님께 어울리는 주얼리 종류는 <strong>${answers[0]}</strong>입니다.</p>
+        <p class="mt-2">고객님이 선택하신 반지 항목에 대해 고객님과 어울리는 주얼리를 아래와 같이 추천 드립니다.</p>
     `;
     resultContainer.appendChild(jewelrySelection);
 
